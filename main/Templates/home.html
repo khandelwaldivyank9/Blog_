@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+</head>
+<body bgcolor="2c7080">
+<h1 align="center" style="font:algerian">WELCOME</h1>
+<div></div>
+<div></div>
+<h2 align="center">BLOGS</h2>
+<div></div>
+<h2>Create:
+    <button onclick="location.href='{% url 'create' %}'">CREATE</button>
+</h2>
+<hr>
+<div></div>
+<h2>View :
+    <button onclick="location.href='{% url 'view' %}'"> VIEW </button>
+</h2>
+<hr>
+{% if user.is_authenticated %}
+<br><br>
+<b>Logged in as :</b>{{request.user}}
+<div>
+    <br>
+    <br>
+    Click To Logout:
+    <button onclick="location.href='{% url 'logout' %}'">LOGUT</button>
+</div>
+{% else %}
+<br>
+<p align="center">
+    <b> LOGIN :</b>
+<button onclick="location.href='{% url 'login' %}'">LOGIN</button>
+<br><br><b>SIGNUP</b>
+    <button onclick="location.href='{% url 'signup' %}'">SIGNUP</button>
+</p>
+{% endif %}
+</body>
+</html>
