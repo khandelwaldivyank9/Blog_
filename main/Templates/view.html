@@ -14,8 +14,8 @@
      <h3>Author:</h3>{{blog.author}}
      <h3>Created:</h3>{{blog.created_date}}
      <h3>Updated:</h3>{{blog.modified_date}}
-     <input type="button" value = "Update" onclick="location.href='{% url 'update' pk=blog.pk %}';">
-     <input type="button" value = "Delete" onclick="location.href='{% url 'delete' pk=blog.pk %}';">
+     <input type="button" value = "Update" onclick="location.href='{% url '/update' pk=blog.pk %}';">
+     <input type="button" value = "Delete" onclick="location.href='{% url '/delete' pk=blog.pk %}';">
     <hr>
     {% endfor %}
 

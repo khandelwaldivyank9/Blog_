@@ -23,7 +23,7 @@ def signup(request):
             user = authenticate(username=username, password=raw_password)
             login(request,user)
             print("secces")
-            return render(request,'home.html')
+            return render(request,'main/Templates/home.html')
 
     else:
         form = UserCreationForm()
